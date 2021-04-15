@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TeamPlayerController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ '/var/www/symfony/src/Controller/TeamPlayerController.php'|file_link(0) }}">src/Controller/TeamPlayerController.php</a></code></li>
+        <li>Your template at <code><a href="{{ '/var/www/symfony/templates/team_player/index.html.twig'|file_link(0) }}">templates/team_player/index.html.twig</a></code></li>
+    </ul>
+
+    <table border="1">
+        <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Sport</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>{{ player.id }}</td>
+            <td>{{ player.name }}</td>
+            <td>{{ player.sport.name }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
